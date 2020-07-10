@@ -22,7 +22,7 @@ namespace pqxx
 /** No, this is not an isolation level.  So it really doesn't belong here.
  * But it's not really worth a separate header.
  */
-enum class write_policy
+enum class write_policy : unsigned int
 {
   read_only,
   read_write
@@ -61,7 +61,7 @@ enum class write_policy
  *
  * Study the levels and design your application with the right level in mind.
  */
-enum isolation_level
+enum isolation_level : unsigned int
 {
   // PostgreSQL only has the better isolation levels.
   // read_uncommitted,
